@@ -5,10 +5,10 @@ const router = express.Router();
 /* Returns a list of available categories */
 router.get('/', (req, res) => {
 	res.json([
-		{ en: 'Around Town', es: 'En el Pueblo' },
-		{ en: 'At the Office', es: 'En la Oficina' },
-		{ en: 'Colors', es: 'De Colores' },
-		{ en: 'Literature', es: 'La Literatura' },
+		{ en: 'Around Town', es: 'En el Pueblo', kebab: 'Around-Town' },
+		{ en: 'At the Office', es: 'En la Oficina', kebab: 'At-the-Office' },
+		{ en: 'Colors', es: 'De Colores', kebab: 'Colors' },
+		{ en: 'Literature', es: 'La Literatura', kebab: 'Literature' },
 	]);
 });
 
