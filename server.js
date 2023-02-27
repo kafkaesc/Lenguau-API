@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+// TODO: Update the cors policy for dev testing versus deployed
 var cors = require('cors');
 app.use(
 	cors({
