@@ -14,7 +14,6 @@ router.get('/', (req, res) => {
 
 /* Returns the list of vocabulary based on the category */
 router.get('/:category', parseCategory, (req, res) => {
-	console.log('req.params: ', req.params);
 	switch (req.params.category) {
 		case 'around town':
 			res.json({
@@ -50,15 +49,16 @@ router.get('/:category', parseCategory, (req, res) => {
 					{ en: 'university', es: 'la universidad' },
 				],
 			});
+			break;
 		case 'at the office':
 			res.json({
 				title: { en: 'At the Office', es: 'En la Oficina' },
 				vocabList: [
-					{ en: 'boss', es: 'el/la jefe/a' },
+					{ en: 'boss', es: 'el jefe/la jefa' },
 					{ en: 'calculator', es: 'la calculadora' },
 					{ en: 'chair', es: 'la silla' },
 					{ en: 'computer', es: 'la computadora' },
-					{ en: 'coworker', es: 'el/la colega' },
+					{ en: 'coworker', es: 'el colega/la colega' },
 					{ en: 'desk', es: 'el escritorio' },
 					{ en: 'email', es: 'el correo electrónico' },
 					{ en: 'job', es: 'el trabajo' },
@@ -73,6 +73,7 @@ router.get('/:category', parseCategory, (req, res) => {
 					{ en: 'stapler', es: 'la grapadora' },
 				],
 			});
+			break;
 		case 'colors':
 			res.json({
 				title: { en: 'Colors', es: 'De Colores' },
@@ -91,11 +92,13 @@ router.get('/:category', parseCategory, (req, res) => {
 					{ en: 'white', es: 'blanco/a' },
 				],
 			});
+			break;
 		case 'literature':
 			res.json({
 				title: { en: 'Literature', es: 'La Literatura' },
 				vocabList: [
 					{ en: 'book', es: 'el libro' },
+					{ en: 'chapter', es: 'el capítulo' },
 					{ en: 'character', es: 'el personaje' },
 					{ en: 'comedy', es: 'la comedia' },
 					{ en: 'drama', es: 'el drama' },
@@ -106,20 +109,24 @@ router.get('/:category', parseCategory, (req, res) => {
 					{ en: 'novel', es: 'la novela' },
 					{ en: 'novella', es: 'la novela corta' },
 					{ en: 'satire', es: 'la sátira' },
-					{ en: 'short story', es: 'el cuento' },
 					{ en: 'science fiction', es: 'la ciencia ficción' },
+					{ en: 'setting', es: 'el ambientación' },
+					{ en: 'short story', es: 'el cuento' },
+					{ en: 'theme', es: 'el tema' },
 					{ en: 'tragedy', es: 'la tragedia' },
 				],
 			});
+			break;
 		default:
 			res.status(400).send('That category does not exist');
+			break;
 	}
 });
 
 function parseCategory(req, res, next) {
 	req.params.category = req.params.category
-		.replace(/-/g, '')
-		.replace(/_/g, '')
+		.replace(/-/g, ' ')
+		.replace(/_/g, ' ')
 		.toLowerCase();
 	next();
 }
