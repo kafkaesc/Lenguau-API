@@ -4,7 +4,6 @@
 	"description": "API for the Lenguau app.",
 	"main": "index.js",
 	"scripts": {
-		"devstart": "nodemon server.js",
 		"build": "./node_modules/.bin/netlify-lambda build src",
 		"start": "NODE_OPTIONS=--openssl-legacy-provider ./node_modules/.bin/netlify-lambda serve src"
 	},
