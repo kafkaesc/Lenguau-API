@@ -4,12 +4,19 @@ const router = express.Router();
 
 /* Returns a list of available categories */
 router.get('/', (req, res) => {
-	res.json([
-		{ en: 'Around Town', es: 'En el Pueblo', kebab: 'Around-Town' },
-		{ en: 'At the Office', es: 'En la Oficina', kebab: 'At-the-Office' },
-		{ en: 'Colors', es: 'De Colores', kebab: 'Colors' },
-		{ en: 'Literature', es: 'La Literatura', kebab: 'Literature' },
-	]);
+	res.json({
+		categoryList: [
+			{ en: 'Around Town', es: 'En el Pueblo', kebab: 'Around-Town' },
+			{ en: 'At the Office', es: 'En la Oficina', kebab: 'At-the-Office' },
+			{ en: 'Colors', es: 'De Colores', kebab: 'Colors' },
+			{ en: 'Literature', es: 'La Literatura', kebab: 'Literature' },
+			{
+				en: 'Top 50 Verbs',
+				es: '50 Verbos Principales',
+				kebab: 'Top-50-Verbs',
+			},
+		],
+	});
 });
 
 /* Returns the list of vocabulary based on the category */
