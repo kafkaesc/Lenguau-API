@@ -108,7 +108,7 @@ router.get('/:category', parseCategory, (req, res) => {
 				],
 			});
 			break;
-		case 'in-the-kitchen':
+		case 'in the kitchen':
 			res.json({
 				title: { en: 'In the Kitchen', es: 'En la Cocina' },
 				vocabList: [
@@ -182,7 +182,7 @@ router.get('/:category', parseCategory, (req, res) => {
 				],
 			});
 			break;
-		case 'top-50-verbs':
+		case 'top 50 verbs':
 			res.json({
 				title: { en: 'Top 50 Verbs', es: '50 Verbos Principales' },
 				vocabList: [
