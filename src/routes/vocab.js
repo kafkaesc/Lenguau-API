@@ -118,7 +118,7 @@ router.get('/:category', parseCategory, (req, res) => {
 					{ en: 'banana', es: 'la banana' },
 					{ en: 'bean', es: 'el frijol' },
 					{ en: 'beef', es: 'la carne de res' },
-					{ en: 'bread', es: 'el pan	' },
+					{ en: 'bread', es: 'el pan' },
 					{ en: 'butter', es: 'la mantequilla' },
 					{ en: 'cake', es: 'el pastel' },
 					{ en: 'carrot', es: 'la zanahoria' },
