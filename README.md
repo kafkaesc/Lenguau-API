@@ -2,7 +2,7 @@
 
 Built by Jared Hettinger
 
-Lenguau API is the Node Express backend for the [Lenguau site](https://kafkaesc.github.io/Lenguau/). It is designed to run on [Netlify](https://www.netlify.com).
+Lenguau API is the Node Express backend for the [Lenguau site](https://lenguau.com/). It is designed to run on [Netlify](https://www.netlify.com).
 
 ## To Run
 
@@ -16,7 +16,7 @@ When the project is running, visit `http://localhost:9000/.netlify/functions/api
 
 Construido por Jared Hettinger
 
-Lenguau API es un backend de Node y Express para el sitio [Lenguau](https://kafkaesc.github.io/Lenguau/). La es diseñado para ejecutarla en [Netlify](https://www.netlify.com).
+Lenguau API es un backend de Node y Express para el sitio [Lenguau](https://lenguau.com/). La es diseñado para ejecutarla en [Netlify](https://www.netlify.com).
 
 ## Para Ejecutarlo
 
